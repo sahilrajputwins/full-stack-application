@@ -7,9 +7,9 @@ RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Build-time API URLs (baked into env.js)
-ARG USER_SERVICE_URL=http://localhost:3001
-ARG DASHBOARD_SERVICE_URL=http://localhost:3002
-ARG SETTINGS_SERVICE_URL=http://localhost:3003
+ARG USER_SERVICE_URL=http://13.127.199.242:3001
+ARG DASHBOARD_SERVICE_URL=http://13.127.199.242:3002
+ARG SETTINGS_SERVICE_URL=http://13.127.199.242:3003
 
 # Copy frontend files
 COPY index.html /usr/share/nginx/html/

@@ -6,7 +6,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: local-path
+  storageClassName: local-path   # 🔥 THIS IS IMPORTANT
   resources:
     requests:
       storage: 5Gi

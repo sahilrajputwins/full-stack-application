@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard-service
+  namespace: microservices
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: settings-service
+  template:
+    metadata:
+      labels:
+        app: settings-service
+    spec:
+      containers:
+        - name: settings-service
+          image: sahilrajputwins/full-stack-app-demo-settings-service
+          ports:
+            - containerPort: 3003
